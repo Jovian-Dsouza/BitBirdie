@@ -1,4 +1,4 @@
-package com.oktoai
+package com.oktoai.OktoAI
 
 import android.os.Build
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package com.oktoai
+package com.oktoai.OktoAI
 
 import android.app.Application
 import android.content.res.Configuration
