@@ -2,10 +2,8 @@ import React, { useEffect } from "react";
 import { Pressable, View, Text } from "react-native";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { useState } from "react";
-import {
-  GOOGLE_WEB_CLIENT_ID,
-  GOOGLE_ANDROID_CLIENT_ID,
-} from '@env';
+import { GOOGLE_WEB_CLIENT_ID, GOOGLE_ANDROID_CLIENT_ID } from "@env";
+import { authenticate } from "rn-okto-sdk";
 
 GoogleSignin.configure({
   webClientId: GOOGLE_WEB_CLIENT_ID,
@@ -16,10 +14,8 @@ GoogleSignin.configure({
 const GoogleLogin = async () => {
   await GoogleSignin.hasPlayServices();
   const userInfo = await GoogleSignin.signIn();
-  console.log("UserInfo", userInfo);
   return userInfo;
 };
-
 
 function SignIn() {
   const [error, setError] = useState("");
@@ -30,14 +26,19 @@ function SignIn() {
     try {
       const response = await GoogleLogin();
       const { idToken, user } = response;
-
-      // if (idToken) {
-      //   const resp = await authAPI.validateToken({
-      //     token: idToken,
-      //     email: user.email,
-      //   });
-      //   // await handlePostLoginData(resp.data);
-      // }
+      console.log("idToken: ", idToken)
+      console.log("user: ", user)
+      if (idToken) {
+        authenticate(idToken, (result, error) => {
+          if (result) {
+            // const wallet: Wallet[] = JSON.parse(result);
+            console.log(result);
+          }
+          if (error) {
+            console.error("Okto wallet login failure: ", error)
+          }
+        });
+      }
     } catch (apiError) {
       console.error("error", apiError.message);
       // setError(
@@ -51,6 +52,7 @@ function SignIn() {
   useEffect(() => {
     console.log("Google android client id: ", GOOGLE_ANDROID_CLIENT_ID)
   }, [])
+
   return (
     <View>
       <Pressable onPress={handleGoogleLogin}>

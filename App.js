@@ -1,8 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { Text, View } from 'react-native';
-import SignIn from './app/screens/SignIn';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { Text, View } from "react-native";
+import SignIn from "./app/screens/SignIn";
+import { BuildType, init } from "rn-okto-sdk";
+import { OKTO_CLIENT_API_KEY } from "@env";
 
+init(OKTO_CLIENT_API_KEY, BuildType.SANDBOX);
 
 export default function App() {
   return (
