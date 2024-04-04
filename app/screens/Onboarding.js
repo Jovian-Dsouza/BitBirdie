@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import Layout from "../layout";
 import { AppImgs } from "../assets/AppImgs";
-import { SparklesIcon } from "react-native-heroicons/solid";
 import { ChevronRightIcon } from "react-native-heroicons/solid";
 import CustomButton from "../components/CustomButton";
 
