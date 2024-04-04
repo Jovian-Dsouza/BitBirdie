@@ -1,9 +1,10 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import Layout from "../layout";
-import { AppImgs } from "../images/AppImgs";
+import { AppImgs } from "../assets/AppImgs";
 import { SparklesIcon } from "react-native-heroicons/solid";
 import { ChevronRightIcon } from "react-native-heroicons/solid";
+import CustomButton from "../components/CustomButton";
 
 function Onboarding() {
   function handleContinue() {}
@@ -37,11 +38,8 @@ function Onboarding() {
           </View>
         </View>
 
-        <TouchableOpacity
-          onPress={handleContinue}
-          className="bg-[#191A1E] rounded-full p-5 px-10  border-2 border-[#AEAEAE]"
-        >
-          <View className="flex flex-row justify-between items-center">
+        <CustomButton onPress={handleContinue}>
+          <View className="flex flex-row justify-between items-center m-5 mx-10">
             <View className="flex flex-row space-x-3 items-center">
               <View className="bg-white rounded-full p-2">
                 <ChevronRightIcon fill="#0F172A" size={22} />
@@ -58,7 +56,8 @@ function Onboarding() {
               <ChevronRightIcon fill="white" size={22} />
             </View>
           </View>
-        </TouchableOpacity>
+        </CustomButton>
+
         {/* <Text className="text-white">Onboarding</Text> */}
       </View>
     </Layout>
