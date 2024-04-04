@@ -5,6 +5,7 @@ import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { useState } from "react";
 import { GOOGLE_WEB_CLIENT_ID, GOOGLE_ANDROID_CLIENT_ID } from "@env";
 import { authenticate } from "rn-okto-sdk";
+import Layout from "../layout";
 
 GoogleSignin.configure({
   webClientId: GOOGLE_WEB_CLIENT_ID,
@@ -55,7 +56,7 @@ function LoginIn() {
   }, []);
 
   return (
-    <View className="flex-1 items-center justify-center bg-black">
+    <Layout>
       <Text className="text-xl font-bold mb-3">Okto API App</Text>
       <StatusBar style="auto" />
       <View>
@@ -68,7 +69,7 @@ function LoginIn() {
           openOktoBottomsheet();
         }}
       />
-    </View>
+    </Layout>
   );
 }
 
