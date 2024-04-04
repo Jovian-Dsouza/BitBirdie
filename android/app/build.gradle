@@ -83,9 +83,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.oktoai.OktoAI'
+    namespace 'com.bitbirdie.BitBirdie'
     defaultConfig {
-        applicationId 'com.oktoai.OktoAI'
+        applicationId 'com.bitbirdie.BitBirdie'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,4 +1,4 @@
-rootProject.name = 'OktoAI'
+rootProject.name = 'BitBirdie'
 
 dependencyResolutionManagement {
   versionCatalogs {

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import { Pressable, View, Text } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { Pressable, View, Text, Button } from "react-native";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import { useState } from "react";
 import { GOOGLE_WEB_CLIENT_ID, GOOGLE_ANDROID_CLIENT_ID } from "@env";
@@ -54,10 +55,19 @@ function SignIn() {
   }, [])
 
   return (
-    <View>
-      <Pressable onPress={handleGoogleLogin}>
-        <Text>Continue with Google</Text>
-      </Pressable>
+    <View className="flex-1 items-center justify-center bg-black">
+      <Text className="text-xl font-bold mb-3">Okto API App</Text>
+      <StatusBar style="auto" />
+      <View>
+        <Button title="Google Sign In" onPress={handleGoogleLogin} />
+      </View>
+      <View className="p-2" />
+      <Button
+        title="Open Okto Profile"
+        onPress={() => {
+          openOktoBottomsheet();
+        }}
+      />
     </View>
   );
 }

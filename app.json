@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "OktoAI",
-    "slug": "OktoAI",
+    "name": "BitBirdie",
+    "slug": "BitBirdie",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ],
     "android": {
-      "package": "com.oktoai.OktoAI"
+      "package": "com.bitbirdie.BitBirdie"
     }
   },
-  "name": "OktoAI"
+  "name": "BitBirdie"
 }

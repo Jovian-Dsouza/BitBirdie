@@ -1,4 +1,4 @@
-package com.oktoai.OktoAI
+package com.bitbirdie.BitBirdie
 
 import android.app.Application
 import android.content.res.Configuration
