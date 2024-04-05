@@ -20,7 +20,7 @@ const GoogleLogin = async () => {
   return userInfo;
 };
 
-function LoginIn() {
+function LoginIn({navigation}) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -36,6 +36,7 @@ function LoginIn() {
           if (result) {
             // const wallet: Wallet[] = JSON.parse(result);
             console.log(result);
+            navigation.navigate('OktoTest')
           }
           if (error) {
             console.error("Okto wallet login failure: ", error);
@@ -60,7 +61,7 @@ function LoginIn() {
     <Layout>
       <View className="flex-1 w-full px-5 py-20">
         <Text className="text-center text-white text-2xl font-bold mb-20">
-          Connect Okto Wallet
+          Connect with Okto Wallet
         </Text>
 
         <Image
