@@ -9,7 +9,7 @@ function Onboarding() {
   function handleContinue() {}
   return (
     <Layout>
-      <View className="flex-1 w-full px-5 py-10 space-y-5">
+      <View className="flex-1 w-full px-5 py-5 space-y-5">
         <View className="flex flex-row justify-start items-center space-x-2">
           <Image
             source={AppImgs.logo}
@@ -19,21 +19,30 @@ function Onboarding() {
           <Text className="text-white text-2xl font-semibold">BitBirdie</Text>
         </View>
 
-        <View className="flex-1 justify-between items-center text-white p-5 py-14 rounded-2xl bg-gray-900">
+        <View className="flex-1 items-center text-white p-5 py-10 rounded-2xl bg-gray-900 mb-6 space-y-8">
           <Image
             source={AppImgs.logo}
             accessibilityLabel="logo"
             className="w-72 h-72 rounded-xl"
           />
 
-          <View className="flex-1 justify-end items-center space-y-4">
+          <View className="flex-1 items-center space-y-4">
             <Text className="text-2xl font-bold text-white">
-              Seamless Crypto Management with BitBirdie
+              🤖 AI-Powered Web3 Magic, Just a Tap Away! ✨
             </Text>
-            <Text className="text-[#FAFAFC]">
-              Unlock automated portfolio management, personalized transaction
-              recommendations, and one-click staking with BitBirdie.
+            <Text className="text-sm text-center text-[#FAFAFC]">
+              Your all-in-one Web3 companion. Unleash the AI magic with Swapping
+              🔄, Limit Orders 🎯, DCA 💹, Portfolio Mastery 📈, and Token
+              Transfers 🚀. Let's dive into the future!
             </Text>
+            <View className="flex flex-row items-center space-x-2 ">
+              <Text className="text-xs text-gray-400">Powered by Okto</Text>
+              <Image
+                source={AppImgs.okto}
+                accessibilityLabel="logo"
+                className="w-6 h-6"
+              />
+            </View>
           </View>
         </View>
 
