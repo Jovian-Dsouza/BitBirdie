@@ -1,6 +1,8 @@
 import React from "react";
-import { View, Text } from "react-native";
 import Layout from "../../layout";
+import { StyleSheet, Text, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
+
 
 function SettingsScreen() {
   return (

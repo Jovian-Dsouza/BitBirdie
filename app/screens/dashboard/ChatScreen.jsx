@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text } from "react-native";
 import Layout from "../../layout";
+import { ScrollView } from "react-native-gesture-handler";
 
 function ChatScreen() {
   return (

@@ -4,10 +4,10 @@ import { SafeAreaView, StatusBar } from "react-native";
 
 const Layout = ({ children }) => {
   return (
-    <View className="flex-1 items-center justify-center bg-black">
-      <StatusBar />
+    <SafeAreaView className="flex-1 items-center justify-center bg-black">
+      <StatusBar backgroundColor="black"/>
       {children}
-    </View>
+    </SafeAreaView>
   );
 };
 
